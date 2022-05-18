@@ -35,9 +35,10 @@ export const getStaticProps = async ({params}) => {
   }
 }
 const RecipeDetails = ({recipe}) => {
-  const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields
+  
   if (!recipe) return <Skeleton />
 
+  const { featuredImage, title, cookingTime, ingredients, method } = recipe.fields
   return (
     <div>
       <div className="banner">
